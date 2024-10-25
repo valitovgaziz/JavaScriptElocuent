@@ -3,9 +3,15 @@ function reverseArray(arr) {
     return res
 }
 
-arr = [1,2,3,4,5]
-reversed = reverseArray(arr)
+function rrrr(arr) {
+    let res = []
+    lengthArr = arr.length - 1
+    for (let i = 0; i < arr.length; i++) {
+        res[i] = arr[lengthArr - i]
+    }
+    return res
+}
 
-console.log(reversed)
-console.log(reversed == arr)
-console.log(reversed === arr)
+
+arr = [1,2,3,4,5]
+console.log(rrrr(arr))
