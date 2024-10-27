@@ -9,4 +9,7 @@ let arr = [
 ]
 let result = []
 let someNewArr = arr.reduce((resArr, arr) => resArr.concat(arr))
-console.log(someNewArr)
+console.log(`
+    Input arr = ${JSON.stringify(arr)}
+    Output arr = ${JSON.stringify(someNewArr)}
+    `)
