@@ -1,16 +1,22 @@
 function everyMethod(arr, everyFunc) {
     for (let index in arr) {
-        if (!everyFunc(arr[index])) {
+        if (!fff(arr[index])) {
             return false
         }
     }
     return true
 }
 
-let arr = [1, 2, 3, 4, 5]
-
-function everyFunc(number) {
-    return number < 4
+function everyWithSome(arr, fff) {
+    return !arr.some(item => !fff(item))
 }
 
-console.log(everyMethod(arr, everyFunc))
+let arr = [1, 2, 3, 4, 5]
+
+function fff(number) {
+    return number < 3
+}
+
+console.log(everyMethod(arr, fff))
+
+console.log(everyWithSome(arr, fff))
