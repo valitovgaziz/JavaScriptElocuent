@@ -1,7 +1,18 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
 function promptDirection(question) {
-    let result = prompt(question)
-    if (result.toLowerCase() == "left") return "L";
-    if (result.toLowerCase() == "right") return "R";
+    var result = "";
+    rl.question(question, (answer) => {
+        result = answer;
+        rl.close();
+    })
+    if (result !== undefined & result.toLowerCase() == "left") return "L";
+    if (result !== undefined & result.toLowerCase() == "right") return "R";
     throw new Error("Неверное направление: " + result);
 }
 
