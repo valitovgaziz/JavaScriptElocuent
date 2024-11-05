@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+<p>Before SVG</p>
+<canvas></canvas>
+<p>After SVG</p>
+</body>
+<script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.beginPath();
+    cx.moveTo(10, 90)
+    cx.quadraticCurveTo(60, 10, 90, 90);
+    cx.lineTo(60, 10);
+    cx.closePath();
+    cx.stroke();
+</script>
+
+<style>
+    p {
+        background-color: antiquewhite;
+    }
+    canvas {
+        background-color: aliceblue;
+    }
+</style>
+
+</html>
