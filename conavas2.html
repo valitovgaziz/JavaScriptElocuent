@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+<p>Before SVG</p>
+<canvas></canvas>
+<p>After SVG</p>
+</body>
+<script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.strokeStyle  = "blue";
+    cx.strokeRect(5, 5, 50, 50);
+    cx.lineWidth = 5;
+    cx.strokeRect(135, 5, 50, 50)
+</script>
+
+<style>
+</style>
+
+</html>
