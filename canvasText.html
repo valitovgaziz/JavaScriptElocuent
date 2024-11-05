@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+<p>Before SVG</p>
+<canvas></canvas>
+<p>After SVG</p>
+</body>
+<script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.font = "28px Georgia";
+    cx.fillStyle = "fushsia";
+    cx.fillText("I can draw text, too!", 10, 50);
+</script>
+
+<style>
+    p {
+        background-color: antiquewhite;
+    }
+    canvas {
+        background-color: aliceblue;
+    }
+</style>
+
+</html>
