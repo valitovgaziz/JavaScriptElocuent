@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+<p>Before SVG</p>
+<canvas></canvas>
+<p>After SVG</p>
+</body>
+<script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.beginPath();
+    cx.moveTo(50, 10);
+    cx.lineTo(10, 70);
+    cx.lineTo(90, 70)
+    cx.fill();
+</script>
+
+<style>
+    p {
+        background-color: antiquewhite;
+    }
+    canvas {
+        background-color: aliceblue;
+    }
+</style>
+
+</html>
