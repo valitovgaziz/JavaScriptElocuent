@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<header>
+    <title>Learn HTML</title>
+</header>
+
+<body>
+    <input type="file" multiple>
+    <script>
+        let input = document.querySelector("input");
+        input.addEventListener("change", () => {
+            for (let file of Array.from(input.files)) {
+                let reader = new FileReader();
+                reader.addEventListener("load", () => {
+                    console.log("File ", file.name, " begine from : ", reader.result.slice(0, 20));
+                });
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+
+</html>
