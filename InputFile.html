@@ -1,23 +1,22 @@
 <!DOCTYPE html>
+<html lang="ru">
 <header>
-
+    <title>Learn HTML</title>
 </header>
-<html>
 
 <body>
-    <input type="file">
+    <input type="file" multiple>
+    <script>
+        console.log("Window is start!");
+        let input = document.querySelector("input");
+        input.addEventListener("change", () => {
+            if (input.files.length > 0) {
+                let file = input.files[0];
+                console.log("Your are choose", file.name);
+                if (file.type) console.log("His type is ", file.type);
+            }
+        });
+    </script>
 </body>
-<script>
-    let input = document.querySelector("input");
-    input.addEventListener("change", () => {
-        if (input.files.length > 0) {
-            let file = input.files[0];
-            console.log("Your are choose", file.name);
-            if (file.type) console.log("His type is ", file.type);
-        }
-    });
-</script>
-<style>
-</style>
 
 </html>
