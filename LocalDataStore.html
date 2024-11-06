@@ -20,7 +20,7 @@
                 if (newState.selected == name) option.selected = true;
                 list.appendChild(option);
             }
-            note.value = newstate.notes[newState.selected];
+            note.value = newState.notes[newState.selected];
 
             localStorage.setItem("Notes", JSON.stringify(newState));
             state = newState;
