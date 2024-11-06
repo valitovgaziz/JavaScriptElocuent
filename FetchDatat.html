@@ -24,8 +24,8 @@
             })
             .then(data => console.log(data))
             .catch(error => console.error('Ошибка:', error));
-        console.log(res);
-        div.textContent = res.url;
+        console.log(JSON.stringify(res));
+        div.textContent = JSON.stringify(res);
     </script>
 </body>
 
