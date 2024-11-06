@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<header>
+    <title>Learn HTML</title>
+</header>
+
+<body>
+    <div class="DIVVV"></div>
+    <script>
+        const url = "https://eloquentjavascript.net/author";
+        const headers = {
+            'Accept': 'application/json'
+        }
+        let div = document.getElementsByClassName("DIVVV");
+        res = fetch(url, {
+            method: "GET",
+            headers: headers
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Сервер вернул ошибку: ' + response.status);
+                }
+                return response.json(); // Преобразуем ответ в JSON
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error('Ошибка:', error));
+        console.log(res);
+        div.textContent = res.url;
+    </script>
+</body>
+
+</html>
