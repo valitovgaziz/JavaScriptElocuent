@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+    <select multiple>
+        <option value="1">0001</option>
+        <option value="2">0010</option>
+        <option value="4">0100</option>
+        <option value="8">1000</option>
+    </select> = <span id="output">0</span>
+</body>
+<script>
+    let select = document.querySelector("select");
+    let output = document.querySelector("#output");
+    select.addEventListener("change", () => {
+        let number = 0;
+        for (let i = 0; i < select.length; i++) {
+            if (select[i].selected) {
+                number += Number(select[i].value);
+            }
+        }
+        output.textContent = number
+    });
+</script>
+<style>
+</style>
+
+</html>
