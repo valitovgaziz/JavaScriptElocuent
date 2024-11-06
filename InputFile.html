@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<header>
+
+</header>
+<html>
+
+<body>
+    <input type="file">
+</body>
+<script>
+    let input = document.querySelector("input");
+    input.addEventListener("change", () => {
+        if (input.files.length > 0) {
+            let file = input.files[0];
+            console.log("Your are choose", file.name);
+            if (file.type) console.log("His type is ", file.type);
+        }
+    });
+</script>
+<style>
+</style>
+
+</html>
